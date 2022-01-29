@@ -1,4 +1,4 @@
-package studyeasy.model;
+package studyeasy.GameService;
 
 import studyeasy.entity.Team;
 
