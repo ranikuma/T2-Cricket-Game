@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import studyeasy.GameService.PlayerModel;
+import studyeasy.GameService.GameService;
 import studyeasy.entity.Team;
 
 @Controller
@@ -116,7 +116,7 @@ public class AppController {
 		System.out.println("UUID = " + myObjectIdForm);
 		List<Team> activePlayers = (List<Team>) request.getSession().getAttribute(myObjectIdForm);
 		System.out.println("activePlayers sie = " + activePlayers.size());
-		PlayerModel playerGameModel = new PlayerModel();
+		GameService playerGameModel = new GameService();
 		int batScore = playerGameModel.playGame(
 				(activePlayers.get(0).getPosition().equals("Batting")) ? activePlayers.get(0) : activePlayers.get(1),
 				(activePlayers.get(0).getPosition().equals("Balling")) ? activePlayers.get(0) : activePlayers.get(1));

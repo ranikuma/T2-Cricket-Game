@@ -2,7 +2,7 @@ package studyeasy.GameService;
 
 import studyeasy.entity.Team;
 
-public class PlayerModel {
+public class GameService {
 
 	public int playGame(Team battingTeam, Team ballingTeam) {
 		// TODO Auto-generated method stub
